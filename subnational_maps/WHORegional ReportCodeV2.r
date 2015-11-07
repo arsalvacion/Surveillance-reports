@@ -326,7 +326,7 @@ wmap<-fortify(wrld_simpl, region="NAME")
 
 theme_set(theme_classic())
 rgtm<-ggplot(wmap, aes(long,lat,group=group))+geom_polygon(fill="grey90")
-rgtm<-rgtm+geom_polygon(data=rnmap.df,aes(long,lat, group=group, fill=notif))+scale_fill_gradient("New and relapse\ncases per\n100 000\npopulation, 2012",low=nc1,high=nc2, space="Lab", guide="legend", breaks=rbrks)+xlim(c(73.55,157))+ylim(c(-11,53))+coord_map()
+rgtm<-rgtm+geom_polygon(data=rnmap.df,aes(long,lat, group=group, fill=notif))+scale_fill_gradient("New and relapse\ncases per\n100 000\npopulation, 2012",low=nc1,high=nc2, space="Lab", guide="legend", breaks=rbrks)+coord_map(xlim=c(73.55,157),ylim=c(-11,53))
 rgtm<-rgtm+theme(axis.text.x =element_blank(),axis.text.y= element_blank(), axis.line = element_blank(), axis.ticks=element_blank(),axis.title.x =element_blank(),axis.title.y= element_blank())
 
 
